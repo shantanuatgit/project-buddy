@@ -1,0 +1,124 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/frontpage-style.css' %}" >
+
+</head>
+<body>
+    <div class="header-top">
+        <div class="logo"><h1>Project Buddy</h1></div>
+        <div class="menu">
+            <a href="#"><h3>Home</h3></a>
+            <a href="#section-1"><h3>Login</h3></a>
+            <a href="#section-2"><h3>Community</h3></a>
+            <a href="#section-3"><h3>About</h3></a>
+        </div>
+    </div>
+
+</div>
+    <div class="content">
+        <div class="banner-aside"></div>
+        <div class="registration-form-container">
+            <form class="registration-form" method="POST" action="{% url 'signup' %}">
+              {% csrf_token %}
+                <h3>Username</h3>
+                <input type="text" name="Username" required />
+                <h3>Password</h3>
+                <input type="password" name="password1" required/>
+                <h3>Confirm Password</h3>
+                <input type="password" name="password2" required/>
+                <div>
+                    <input type="submit" class="button" value="Get Hired">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="section-1">
+    <h1 style="padding: 130px; text-align: center;">Treat your password like your toothbrush. Don't let anybody else use it, and get a new one every six months.</h1>
+
+    <div class="login-container">
+        <div class="login-form-container">
+            <form class="login-form" method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+                <h3>Username</h3>
+                <input type="text" name="username" required/>
+                <h3>Password</h3>
+                <input type="password" name="password" required/ >
+                <div>
+                    <input type="submit" class="button" value="Let's get started">
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <div id="section-2">
+    <h1 style="padding: 130px; text-align: center;">There are 10 Type of programmers.<br>Those who understand BINARY, and those who don't</h1>
+    <div class="community-section">
+        <div class="community-section-text">
+            <h1 style="text-align: center; margin-top: 30px;">Join Our Community!</h1>
+            <h3 style="text-align: center; margin-top: 30px;">'Project Buddy' brings together Thinkers and Developers</h3>
+            <h3 style="text-align: center; margin-top: 30px;">Join us if you have an idea or want to work on a Project!</h3>
+            <div class="join-us"><a href="#" style="text-decoration: none; color: white; cursor: pointer;"><b>Join Us</b></a></div>
+        </div>
+        <div class="community-banner"></div>
+
+    </div>
+    </div>
+    <div id="section-3">
+    <h1 style=" text-align: center; padding: 20px;">Our Team</h1><br><h3 style="text-align: center;">We worked tirelessly on this 100% original idea of ours to contribute something back to the developer community</h3>
+    <div class="team-section">
+        <div class="team-member-card">
+            <div class="team-member-pic-1"></div>
+            <div class="team-member-info">
+                <h3 style="text-align: center; margin-top: 20px;">Divyansh Singh Sengar</h3>
+                <h4 style="text-align: center; margin-top: 20px;">FullStack Developer</h4>
+                <p style="text-align: center; margin-top: 20px;">Django developer | Python Programmer</p>
+                <div class="social-media">
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/github--v1.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-member-card">
+            <div class="team-member-pic-2"></div>
+            <div class="team-member-info">
+                <h3 style="text-align: center; margin-top: 20px;">Shantanu Awasthi</h3>
+                <h4 style="text-align: center; margin-top: 20px;">Backend Developer</h4>
+                <p style="text-align: center; margin-top: 20px;">Django developer | Python Programmer</p>
+                <div class="social-media">
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/github--v1.png"/></a>
+                </div>
+            </div>
+        </div>
+        <div class="team-member-card">
+            <div class="team-member-pic-3"></div>
+            <div class="team-member-info">
+                <h3 style="text-align: center; margin-top: 20px;">Divyansh Gupta</h3>
+                <h4 style="text-align: center; margin-top: 20px;">Data Analyst</h4>
+                <p style="text-align: center; margin-top: 20px;">Python Programmer | Data science</p>
+                <div class="social-media">
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/facebook-new.png"/></a>
+                    <a href="#"><img src="https://img.icons8.com/doodle/48/000000/github--v1.png"/></a>
+                </div>
+            </div>
+
+    </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

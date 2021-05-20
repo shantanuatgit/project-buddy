@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.header-top{
+    background-color: white;
+    width: 100%;
+    height: 15vh;
+    box-shadow: 5px 0 10px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+}
+.logo{
+    width: 25%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    border: 2px solid grey;
+    padding: 10px 10px;
+    border-radius: 3px;
+}
+
+.menu a:active{
+    background-color: #6400e4;
+    color: white;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+.content{
+    height: 85vh;
+    width: 100%;
+    background-color:white;
+    display: flex;
+    overflow: hidden;
+}
+.banner-aside{
+    width: 50%;
+    height: 85vh;
+    background-image: url('banner-aside.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 15vh;
+    border-radius: 5px;
+}
+.registration-form-container{
+    width: 50%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12vh;
+}
+.registration-form input{
+    width: 30vw;
+    height: 5vh;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.login-container{
+    width: 100%;
+}
+.login-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    background-image: url('login-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+.login-form input{
+    width: 30vw;
+    height: 5vh;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.login-form h3{
+    color: white;
+    letter-spacing: 3px;
+}
+.registration-form h3{
+    letter-spacing: 3px;
+}
+.community-section{
+    display: flex;
+    width: 100%;
+    height: 50vh;
+}
+.community-section-text{
+    width: 40%;
+    height: 50vh;
+}
+.community-banner{
+    width: 60%;
+    height: 50vh;
+    background-image: url('community-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+.join-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 20vw;
+    background-color: #6400e4;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-left: 150px;
+    border-radius: 3px;
+}
+.team-section{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+}
+.team-member-card{
+    width: 400px;
+    height: 500px;
+}
+.team-member-pic-1{
+    width: 250px;
+    height: 250px;
+    background-image: url('team-member-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 75px;
+    border-radius: 5px;
+}
+.team-member-pic-2{
+    width: 250px;
+    height: 250px;
+    background-image: url('team-member-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 75px;
+    border-radius: 5px;
+}
+.team-member-pic-3{
+    width: 250px;
+    height: 250px;
+    background-image: url('team-member-3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 75px;
+    border-radius: 5px;
+}
+.social-media{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+.button {
+    background-color: #6400e4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+  }

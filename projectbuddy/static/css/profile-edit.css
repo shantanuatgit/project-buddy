@@ -1,0 +1,125 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-top: 180px;
+}
+.header-nav-top{
+    background-color: white;
+    width: 100%;
+    height: 15vh;
+    box-shadow: 5px 0 10px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.logo{
+    width: 30%;
+    text-align: center;
+    letter-spacing: 3px;
+
+}
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.menu a{
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    border: 2px solid grey;
+    padding: 10px 10px;
+    border-radius: 3px;
+    color: #6400e4;
+}
+.menu a:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+    box-shadow: 0px 0px 5px gray;
+}
+.menu a:active{
+    background-color: #6400e4;
+    color: white;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+.button {
+    background-color: #6400e4;
+    border: none;
+    color: white;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 62px;
+    cursor: pointer;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+.button:hover{
+    transform: scale(1.1);
+    transition: ease-in-out;
+    box-shadow: 0px 0px 10px gray;
+}
+.main-content{
+    font-family: 'Alfa Slab One', cursive;
+    width: 100%;
+    display: flex;
+}
+.main-content img{
+    width: 300px;
+    height: 300px;
+    margin-left: 80px;
+
+}
+.profile-form{
+    margin-left: 60px;
+}
+.profile-form input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    outline: none;
+    font-weight: lighter;
+}
+.profile-form-selection{
+    margin-left: 60px;
+}
+.options{
+    display: flex;
+    margin-bottom: 20px;
+}
+.button {
+    background-color: #6400e4;
+    border: none;
+    color: white;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 62px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button:hover{
+    box-shadow: 0 0 5px grey;
+    transform: scale(1.1);
+    transition: ease-in-out;
+}

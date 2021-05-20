@@ -1,0 +1,44 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responses-style.css' %}" >
+
+    <title>Invite Response</title>
+</head>
+<body>
+    <div class="header-nav-top">
+        <div class="logo"><h2><b>Project Buddy</b></h2></div>
+        <div class="menu">
+            <a href="{% url 'home' %}">Profiles</a>
+            <a href="{% url 'invitesview' %}">Invite</a>
+
+            <a href="#">My Profile</a>
+            {% if user.is_authenticated %}
+            <a  href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+            <form id="logout" action="{% url 'logout' %}" method="post">
+              {% csrf_token %}
+              <input type="hidden" />
+            </form>
+            {% endif %}
+        </div>
+    </div>
+    <b><h1 style="letter-spacing: 5px;margin-left: 70px;margin-bottom: 40px;">RESPONSE</h1></b>
+    {% for accepter in  accepters %}
+    <div class="invites">
+        <div class="img-container"><img src="{{ accepter.accepter.profile_pic.url }}" style="height: 80px; width: 80px;"></div>
+        <div class="dev-name"><h3>{{ accepter.accepter.name }} <span style="color: chartreuse;">has accepted your invite</span></h3>
+            <br><h4>{{ accepter.accepter.developer_type }}</h4></div>
+            <form  action="{{ accepter.accepter.id }}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="invite-button">View Profile</button>
+            </form>
+    </div>
+    {% endfor %}
+</body>
+</html>
